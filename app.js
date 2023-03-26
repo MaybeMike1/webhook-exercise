@@ -172,6 +172,6 @@ function triggerPush() {
   });
 }
 
-const server = app.listen(8080, () => {
+const server = app.listen(80, () => {
   console.log("Server is running on", server.address().port);
 });
