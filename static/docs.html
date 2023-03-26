@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style.css"/>
+    <title>Documentation</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Webhook Documentation</h1>
+        <h4 class="header__author">Issued by Michael</h4>
+    </header>
+
+    <main>
+        <h3>Webhook EventTypes</h3>
+        <ul class="eventTypes">
+            <li class="eventTypes__item">Payment Received. Object value : payment_received</li>
+            <li class="eventTypes__item">Payment Received. Object value : payment_processing</li>
+            <li class="eventTypes__item">Payment Received. Object value : payment_complete</li>
+            <li class="eventTypes__item">Payment Received. Object value : payment</li>
+        </ul>
+        <h3>Webhook Registration Proceducre</h3>
+        <ol class="registration">
+            <li class="registration__item">Via postman - Make a POST request to server endpoint <a href="">/register</a></li>
+            <li class="registration__item">In the request body you should have certain eventTypes you want to register with an endpoint URL and name of the webhook.</li>
+            <li class="registration__item">The response from the server would be 202 - Accepted. This should be a good indication of the webhook working as it should</li>
+            <li class="registration__item">If the eventType doesn't exist, 500 - Internal Server Errors. Due to the missing eventType, that is trying to be registered.</li>
+            <li class="registration__item">When the Webhook has been initiated - then the server will try ping the endpoints of the remote servers.</li>
+        </ol>
+    </main>
+</body>
+</html>

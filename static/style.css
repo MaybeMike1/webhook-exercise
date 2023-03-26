@@ -1,0 +1,39 @@
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+body{
+    background: rgba(24, 15, 15, 0.133);
+}
+
+main {
+    padding-left: 15%;
+    padding-right: 15%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.header > .header__author {
+    margin: 0;
+}
+
+
+.eventTypes {
+
+}
+
+.eventTypes > .eventTypes__item {
+    padding-bottom: 10px;
+}
+
+.registration {
+
+}
+
+.registration > .registration__item {
+    padding-bottom: 10px;
+}
