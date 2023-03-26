@@ -1,6 +1,9 @@
-import express from "express";
+/* import express from "express";
 import fs from "fs";
-import fetch from "node-fetch";
+import fetch from "node-fetch"; */
+const express = require('express');
+const fs = require('fs');
+const fetch = require('node-fetch');
 
 const app = express();
 app.use(express.static('static'));
