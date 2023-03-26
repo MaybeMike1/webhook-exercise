@@ -60,6 +60,7 @@ function removeWebhook(endpoint) {
   let filteredArr = webHooks.filter((e) => e.endpoint !== endpoint);
   let jsonString = JSON.stringify(filteredArr);
   fs.writeFileSync("./webhooks.json", jsonString);
+  return filteredArr;
 }
 
 
@@ -79,7 +80,7 @@ app.post("/register", (req, res) => {
 app.post("/unregister", (req, res) => {
   try {
     const object = req.body;
-    removeWebhook(object.endpoint);
+    webHooks = removeWebhook(object.endpoint);
     res.status(202).send({ message: "Webhook is unregistered" });
   } catch (e) {
     res.status(500).send({ error: e.toString() });
