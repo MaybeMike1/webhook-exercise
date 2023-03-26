@@ -41,6 +41,14 @@
             <li class="registration__item">If the eventType doesn't exist, 500 - Internal Server Errors. Due to the missing eventType, that is trying to be registered.</li>
             <li class="registration__item">When the Webhook has been initiated - then the server will try ping the endpoints of the remote servers.</li>
         </ol>
+        <h3>Webhook Unregitration Procedure</h3>
+        <ol class="registration">
+            <li class="registration__item"> Via Postman - Make a Post request to server endpoint <a href="">/unregister</a></li>
+            <li>In the body <code> body : {
+                endpoint: your registered endpoint as string
+            }
+            </code></li>
+        </ol>
     </main>
 </body>
 </html>
